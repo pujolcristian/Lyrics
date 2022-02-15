@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="message"
+            type="String" />
+
+        <variable
+            name="onAcceptClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.dialogs.LoadingDialogFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_custom_alert"
+            android:backgroundTint="@color/window_bg">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="bg_icon_error.json"
+                app:lottie_loop="true" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_error"
+                app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+                app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView"
+                app:layout_constraintStart_toStartOf="@+id/lottieAnimationView"
+                app:layout_constraintTop_toTopOf="@+id/lottieAnimationView" />
+
+            <TextView
+                android:id="@+id/textview_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lottieAnimationView"
+                android:gravity="center"
+                android:paddingBottom="@dimen/default_margin"
+                android:text="@string/error"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/font_size_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView"
+                tools:text="Loren Upsun" />
+
+            <TextView
+                android:id="@+id/textview_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:gravity="center"
+                android:text="@{message}"
+                android:textColor="@color/light_color"
+                android:textSize="@dimen/font_size_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_title"
+                tools:text="Esto es una prueba de un mensaje a mostrar en un alert desde Android." />
+
+            <View
+                android:id="@+id/divider_deductions"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="@dimen/big_margin"
+                android:background="@color/light_color"
+                app:layout_constraintTop_toBottomOf="@+id/textview_message" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_accept"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{onAcceptClick}"
+                android:text="@string/accept"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_deductions" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

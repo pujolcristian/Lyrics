@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lyrics</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_request_could_not_processed_try_later">No se ha podido procesar su solicitud, intente de nuevo más tarde</string>
+    <string name="song_no_found">No se ha encontrado ningúna canción con el nombre ingresado.</string>
+    <string name="enter_song_name">Debe ingresar el nombre de una canción o artista para continuar</string>
+    <string name="error">Error</string>
+    <string name="accept">Aceptar</string>
+    <string name="format_name_artist">Artista: %s</string>
+    <string name="format_name_album">Album: %s</string>
+    <string name="lyrics_no_found">No se encontró la letra de la canción.</string>
+    <string name="need_connection_internet">Necesita conexión a internet para realizar esta acción.</string>
+    <string name="songs">Canciones</string>
+    <string name="search_lyrics_songs">Busca la letra de tu canción favorita</string>
+
+</resources>

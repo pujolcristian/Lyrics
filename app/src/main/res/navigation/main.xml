@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.talents.lyrics.feature_lyrics.presentation.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/navigateToSearchSongsFragment"
+            app:destination="@id/searchSongsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchSongsFragment"
+        android:name="com.talents.lyrics.feature_lyrics.presentation.search_songs.SearchSongsFragment"
+        android:label="fragment_search_songs"
+        tools:layout="@layout/fragment_search_songs">
+        <action
+            android:id="@+id/navigateToLyricsFragment"
+            app:destination="@id/lyricsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lyricsFragment"
+        android:name="com.talents.lyrics.feature_lyrics.presentation.lyrics_song.LyricsFragment"
+        android:label="fragment_lyrics"
+        tools:layout="@layout/fragment_lyrics">
+        <argument
+            android:name="nameArtist"
+            app:argType="string" />
+        <argument
+            android:name="nameSong"
+            app:argType="string" />
+    </fragment>
+</navigation>

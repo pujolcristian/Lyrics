@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="window_bg">#0c0c0c</color>
+    <color name="bar">#121212</color>
+    <color name="item_bg">#424242</color>
+
+    <color name="primary_color">#e2f2f0</color>
+    <color name="primary_text_color">#f5fbfd</color>
+    <color name="secondary_text_color">#10141d</color>
+    <color name="light_color">#3f4346</color>
+    <color name="dark_color">#8d9997</color>
+</resources>
